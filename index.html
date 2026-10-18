@@ -6,6 +6,7 @@
     <title>Портфолио</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/skills.css">
+    <link rel="stylesheet" href="styles/proj.css">
 </head>
 <body>
     
@@ -62,7 +63,7 @@
                 <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
                     <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-3-1.png" alt="Godot" class="skill-card_img">
+                    <img src="images/skill-3.png" alt="Godot" class="skill-card_img">
                     <h3 class="skill-card_name">Godot</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
@@ -98,7 +99,7 @@
                 <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
                     <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-6-1.png" alt="Prompt Engineering" class="skill-card_img">
+                    <img src="images/skill-6.png" alt="Prompt Engineering" class="skill-card_img">
                     <h3 class="skill-card_name">Prompt Engineering</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
@@ -149,14 +150,68 @@
         <p>Дополнительная информация: во время учёбы изучал следующие технологии: Python, C#, Unity, Web, Arduino</p>
     </section>
     <section id="projects">
-        <h4>Проекты</h4>
-        <ul class="projects_show">
-            <li>2д платформер с тематикой путешествия во времени</li>
-            <li>Сайт-резюме</li>
-            <li>Калькулятор всё в одном (в прогрессе)</li>
-            <li>Морской бой в космосе (В процессе)</li>
-            <li>Симулятор ведьмы (В процессе)</li>
-        </ul>
+        <h2 class="projects_title">Проекты</h2>
+        <div class="proj_grid">
+            <div class="proj-card">
+                <div class="proj-card_inner">
+                    <div class="proj-card_front">
+                        <img class="proj-card-img" src="images/proj_game.png" alt="Platformer">
+                        <h3 class="proj-card_name"> 2д платформер с тематикой путешествия во времени</h3>
+                    </div>
+                    <div class="proj-card_back">
+                        <p class="proj-card_desc">2D-платформер, в котором тема путешествий во времени становится основой игрового процесса. Игрок исследует уровни, преодолевает препятствия и взаимодействует с окружением, используя особенности разных временных периодов. Проект предполагает сочетание классических механик платформера с головоломками и изменением игрового мира. Основная задача разработки — создать интересные игровые ситуации и связать механику перемещения с временной тематикой. Это pet-проект, в рамках которого я изучаю разработку игр и проектирование игровых механик.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card_inner">
+                    <div class="proj-card_front">
+                        <img class="proj-card-img" src="images/proj_site.png" alt="Resume">
+                        <h3 class="proj-card_name">Сайт-резюме</h3>
+                    </div>
+                    <div class="proj-card_back">
+                        <p class="proj-card_desc">Персональный сайт-портфолио, созданный для презентации моих навыков, интересов и собственных проектов. Сайт объединяет информацию обо мне, технические компетенции, опыт и примеры выполненных работ в едином интерфейсе. Визуальный стиль вдохновлён тёмным фэнтези и сочетает атмосферное оформление с удобной навигацией. При разработке я уделяю внимание адаптивной вёрстке, структурированию кода и доступности контента на разных устройствах. Проект также служит практикой в HTML, CSS и JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card_inner">
+                    <div class="proj-card_front">
+                        <img class="proj-card-img" src="images/proj_site.png" alt="Calculator">
+                        <h3 class="proj-card_name">Калькулятор всё в одном (в прогрессе)</h3>
+                    </div>
+                    <div class="proj-card_back">
+                        <p class="proj-card_desc">Небольшое приложение-калькулятор, предназначенное для выполнения повседневных арифметических вычислений. Проект позволяет отработать обработку пользовательского ввода, работу с числами и реализацию математических операций. Особое внимание уделяется корректной обработке выражений, отображению результата и предотвращению ошибок при вычислениях. Интерфейс разрабатывается с учётом удобства использования и понятной обратной связи для пользователя. Это практический проект для закрепления основ программирования и создания интерактивных интерфейсов.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card_inner">
+                    <div class="proj-card_front">
+                        <img class="proj-card-img" src="images/proj_game.png" alt="StarBattles">
+                        <h3 class="proj-card_name">Морской бой в космосе</h3>
+                    </div>
+                    <div class="proj-card_back">
+                        <p class="proj-card_desc">Игровой проект, переосмысляющий классический морской бой в научно-фантастическом сеттинге. Вместо неподвижного размещения кораблей предполагается возможность перемещать их по игровому полю и использовать специальные способности, расходуя ограниченный запас энергии. Повреждения кораблей влияют на их мобильность, а некоторые бонусы позволяют менять позицию или скрывать перемещения от противника. Проект предусматривает режим игры против бота и локальное сражение двух игроков на одном устройстве.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proj-card">
+                <div class="proj-card_inner">
+                    <div class="proj-card_front">
+                        <img class="proj-card-img" src="images/proj_game.png" alt="WitchSim">
+                        <h3 class="proj-card_name">Симулятор ведьмы</h3>
+                    </div>
+                    <div class="proj-card_back">
+                        <p class="proj-card_desc">Игровой проект о жизни ведьмы в фэнтезийном мире, где магия и исследование окружающей среды составляют основу игрового опыта. Концепция предполагает возможность изучать магические способности, экспериментировать с заклинаниями и развивать собственные навыки. Важной частью проекта является взаимодействие игровых систем, от управления ресурсами до применения магии в различных ситуациях. Разработка такого симулятора предоставляет возможность экспериментировать с игровой логикой, прогрессией персонажа и созданием атмосферного мира.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="contacts">
         <h4>Контакты</h4>
@@ -168,5 +223,6 @@
 </main>
 
 <script src="js/skills.js"></script>
+<script src="js/proj.js"></script>
 </body>
 </html>
