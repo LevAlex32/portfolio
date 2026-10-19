@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/proj.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;700&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/theme.css">
 </head>
 <body>
     
@@ -14,8 +20,8 @@
     <div class="sidebar_name">Левин Александр Васильевич</div>
 
     <nav class="sidebar_nav">
-      <a href="#main">⌂</a>
-      <a href="#about">Обо мне</a>
+      <a href="#main">Главная</a>
+      <a href="#about-quotes">Обо мне</a>
       <a href="#skills">Навыки</a>
       <a href="#experience">Рабочий опыт</a>
       <a href="#education">Образование</a>
@@ -26,12 +32,21 @@
 
 
 <main class="content">
-    <section id="main"></section>
+    <section id="main" class="hero">
+        <figure class="hero_photo">
+            <img src="images/hero.png" alt="Photo">
+        </figure>
+        <div class="hero_text"> 
+            <p class="hero_kicker">Начинающий разработчик</p>
+            <h1 class="hero_title">Левин Александр</h1>
+            <p class="hero_subtitle">Создаю проекты, изучаю новые технологии и стремлюсь к постоянному развитию в сфере программирования.</p>
+        </div>
+    </section>
     <section id="about-quotes" class="about-quotes"> 
         <div class="about">
         <h4>Обо мне</h4>
-        <p>Я начинающий разрабочик, увлечённый программированиеи и созданием собственных проектов. Быстро обучаюсь, с интересом осваиваю новые технологии и стараюсь применять полученные знания на практике. <br>
-            Мне нравится решать технические задачи, экспериментироать с идеями и находить способы сделать свои проекты лучше. В свободное время я увлекаюсь видеоиграми, чтением, комиксами и настольными ролевыми играми. Также мне интересно разрабатывать собственные игровые концепции и исследовать, как устроены виртуальные миры и их механики. <br> 
+        <p>Я начинающий разработчик, увлечённый программированием и созданием собственных проектов. Быстро обучаюсь, с интересом осваиваю новые технологии и стараюсь применять полученные знания на практике. <br>
+            Мне нравится решать технические задачи, экспериментировать с идеями и находить способы сделать свои проекты лучше. В свободное время я увлекаюсь видеоиграми, чтением, комиксами и настольными ролевыми играми. Также мне интересно разрабатывать собственные игровые концепции и исследовать, как устроены виртуальные миры и их механики. <br> 
             Я стремлюсь постоянно развиваться, совершенствовать свои навыки и создавать полезные, интересные и качественные проекты.</p>
             </div>
 
@@ -222,29 +237,29 @@
         </div>
     </section>
     <section id="contacts">
-        <h4>Контакты</h4>
+        <h2>Контакты</h2>
         <div class="contacts">
             <div class="contact">
                 <span class="contact_icon">
-                    <img class ="contact_icon-img" src="images/icon_email.png" alt="Email">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 </span>
-                <a href="mailto:">Почта</a>
+                <a href="mailto:levalex200407@gmail.com">levalex200407@gmail.com</a>
             </div>
             <div class="contact">
                 <span class="contact_icon">
-                    <img class ="contact_icon-img" src="images/icon_linkedin.png" alt="Linkedin">
+                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
                 </span>
                 <a href="https://www.linkedin.com/in/alexander-levin-656373364">Alexander Levin</a>
             </div>
             <div class="contact">
                 <span class="contact_icon">
-                    <img class ="contact_icon-img" src="images/icon_telegram.png" alt="Telegram">
+                     <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                 </span>
                 <a href="https://t.me/alexlev541">Левин Александр</a>
             </div>
             <div class="contact">
                 <span class="contact_icon">
-                    <img class ="contact_icon-img" src="images/icon_phone.png" alt="Phone">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </span>
                 <a href="tel:+77051119474">+7 705 111 94 74</a>
             </div>
