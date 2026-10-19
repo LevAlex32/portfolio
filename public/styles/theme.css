@@ -449,30 +449,144 @@ a:hover {
     text-decoration: underline; 
 }
 
-/* ---------- Мобильная версия ---------- */
+html { font-size: 16px; }
+@media (min-width: 1920px) { html { font-size: 20px; } }   /* 1920 × 1080 */
+@media (min-width: 2560px) { html { font-size: 24px; } }   /* 2560 × 1440 */
+@media (min-width: 3840px) { html { font-size: 32px; } }   /* 3840 × 2160 */
+ 
+/* ---------- Размеры из style/skills/proj.css, переведённые в rem ---------- */
+:root { --sidebar-w: 15rem; }
+ 
+body     { padding-left: var(--sidebar-w); }
+.sidebar { width: var(--sidebar-w); }
+ 
+.content {
+    max-width: 75rem;
+    margin-inline: auto;         /* на широких экранах контент по центру */
+}
+ 
+.hero { min-height: 100vh; min-height: 100svh; }
+ 
+.about-quotes { gap: 1.5rem; }
+.about  { max-width: 37.5rem; }
+.quotes { max-width: 26rem; }
+ 
+.skills_grid { gap: 1.5rem; }
+.skill-card  { height: 15rem; }
+.skill-card_face { padding: 1.5rem; }
+.skill-card_img  { width: 6rem; height: 6rem; }
+ 
+.proj_grid { gap: 1.25rem; }
+.proj-card { height: 16.25rem; }
+ 
+/* Если текст не влез — прокрутка, а не обрезание */
+.skill-card_back { justify-content: safe center; overflow-y: auto; }
+ 
+.timeline_item { grid-template-columns: 12.5rem 1fr; gap: 1.5rem; }
+.timeline_item::before { top: 0.25rem; left: -2rem;      width: 0.75rem; height: 0.75rem; }
+.timeline_item::after  { top: 1rem;    left: -1.6875rem; bottom: -0.25rem; width: 0.125rem; }
+ 
+/* ---------- ≤ 1100px: планшеты, маленькие ноутбуки (1024 × 1366) ---------- */
+@media (max-width: 1100px) {
+    .content { padding: 2rem; }
+    .about-quotes { flex-direction: column; }
+    .about, .quotes { max-width: 100%; width: 100%; }
+    .hero { gap: 2.5rem; }
+}
+ 
+/* ---------- ≤ 800px: меню уходит наверх (768 × 1024, 667 × 375) ---------- */
 @media (max-width: 800px) {
-    body { padding-left: 0; font-size: 18px; }
-
+    body { padding-left: 0; font-size: 1.125rem; }
+ 
     .sidebar {
         position: static;
         width: 100%;
         height: auto;
         border-right: none;
         border-bottom: 1px solid var(--gold);
-        padding: 20px 16px;
+        padding: 1.25rem 1rem;
     }
-
-    .sidebar_name { margin-bottom: 20px; }
-
-    .sidebar_nav { flex-direction: row; flex-wrap: wrap; justify-content: center; }
-    .sidebar_nav a { border-left: none; border-bottom: 2px solid transparent; }
-    .sidebar_nav a:hover { padding-left: 12px; border-bottom-color: var(--blood); }
-
-    .content { padding: 24px 16px; }
-
-    .hero { min-height: auto; justify-content: center; text-align: center; gap: 32px; }
-    .hero_photo { flex-basis: auto; width: 260px; height: 340px; }
-    .hero_title { font-size: 38px; }
+ 
+    .sidebar_name { margin-bottom: 1.25rem; padding-bottom: 1rem; font-size: 1.25rem; }
+    .sidebar_nav  { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0.25rem 0.5rem; }
+    .sidebar_nav a { padding: 0.375rem 0.625rem; font-size: 1.0625rem; border-left: none; border-bottom: 2px solid transparent; }
+    .sidebar_nav a:hover { padding-left: 0.625rem; border-bottom-color: var(--blood); background: none; }
+ 
+    .content { padding: 1.5rem 1.25rem; }
+    .content section { padding: 2.5rem 0; }
+ 
+    .hero { min-height: auto; }
+    .hero_photo { flex-basis: 16rem; width: 16rem; height: 21rem; border-radius: 8rem 8rem 0.5rem 0.5rem; }
+    .hero_photo img, .hero_photo_placeholder { border-radius: 7.5rem 7.5rem 0.125rem 0.125rem; }
+    .hero_title { font-size: 2.75rem; }
+ 
+    h2 { font-size: 1.75rem; margin-bottom: 1.25rem; }
+ 
+    /* 2 колонки навыков и проектов вместо одной/трёх */
+    .skills_grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .proj_grid   { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+    .proj-card, .proj-card:nth-child(1), .proj-card:nth-child(2) { grid-column: auto; }
+    .proj-card:last-child:nth-child(odd) { grid-column: 1 / -1; }   /* нечётная последняя — на всю ширину */
+    .skill-card { height: 16rem; }
+    .proj-card  { height: 18rem; }
+}
+ 
+/* ---------- ≤ 640px: фото над текстом ---------- */
+@media (max-width: 640px) {
+    .hero { flex-direction: column; justify-content: center; text-align: center; gap: 1.75rem; }
+    .hero_photo { flex: none; }
     .hero_sub { margin-inline: auto; }
     h2::after { margin-inline: auto; }
+    h2 { text-align: center; }
+ 
+    .timeline { padding-left: 1.75rem; }
+    .timeline_item { grid-template-columns: 1fr; gap: 0.25rem; }
+    .timeline_item::before { left: -1.4375rem; }
+    .timeline_item::after  { left: -1.125rem; }
+}
+ 
+/* ---------- ≤ 560px: телефоны в портрете (375 × 667, 390 × 844) ---------- */
+@media (max-width: 560px) {
+    .content { padding: 1.25rem 1rem; }
+    .hero_title { font-size: 2.25rem; }
+    .hero_sub { font-size: 1.125rem; }
+ 
+    .skills_grid, .proj_grid { grid-template-columns: 1fr; }
+    .skill-card { height: 15rem; }
+    .proj-card  { height: 26rem; }
+    .proj-card_desc { font-size: 0.9375rem; }
+ 
+    .contacts { flex-direction: column; gap: 0.75rem; }
+    .contact  { width: 100%; }
+}
+ 
+/* ---------- ≤ 360px: самые узкие (320 × 568) ---------- */
+@media (max-width: 360px) {
+    html { font-size: 15px; }
+    .sidebar { padding: 1rem 0.5rem; }
+    .sidebar_nav a { padding: 0.3125rem 0.4375rem; font-size: 1rem; letter-spacing: 0.04em; }
+    .hero_photo { width: 13.5rem; height: 18rem; }
+    .hero_title { font-size: 2rem; }
+    .quotes { padding: 1.5rem 1rem 1rem; }
+    .skill-card_face, .proj-card_front, .proj-card_back { padding: 1rem; }
+    .skill-card { height: 17rem; }
+    .proj-card  { height: 30rem; }
+}
+ 
+/* ---------- Телефон в ландшафте (667 × 375): мало высоты ---------- */
+@media (max-height: 520px) and (orientation: landscape) {
+    .sidebar { padding: 0.75rem 1rem; }
+    .sidebar_name { margin-bottom: 0.75rem; padding-bottom: 0.625rem; }
+    .hero { flex-direction: row; text-align: left; gap: 1.5rem; padding-block: 1.25rem; min-height: auto; }
+    .hero_photo { flex: 0 0 auto; width: 10rem; height: 13.5rem; border-radius: 5rem 5rem 0.375rem 0.375rem; padding: 0.375rem; }
+    .hero_photo img, .hero_photo_placeholder { border-radius: 4.5rem 4.5rem 0.125rem 0.125rem; font-size: 1rem; }
+    .hero_title { font-size: 2rem; }
+    h2::after { margin-inline: 0; }
+    h2 { text-align: left; }
+}
+ 
+/* ---------- Доступность: отключаем анимации, если пользователь просит ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; }
 }
