@@ -1,0 +1,386 @@
+[
+  {
+    "id": 1,
+    "quote": "What is better—to be born good, or to overcome your evil nature through great effort?",
+    "author": "Paarthurnax",
+    "shown": false
+  },
+  {
+    "id": 2,
+    "quote": "To defeat your enemy, first eliminate their allies.",
+    "author": "Karliah",
+    "shown": false
+  },
+  {
+    "id": 3,
+    "quote": "A sure sign of a fool is dismissing as impossible anything not confirmed by their own experience.",
+    "author": "Farengar Secret-Fire",
+    "shown": false
+  },
+  {
+    "id": 4,
+    "quote": "Make use of every opportunity life gives you, because you never know when your time to leave will come.",
+    "author": "Gharaz",
+    "shown": false
+  },
+  {
+    "id": 5,
+    "quote": "Just because the world is the way it is doesn't mean it has to stay that way forever.",
+    "author": "Jorleif Gray-Mane",
+    "shown": false
+  },
+  {
+    "id": 6,
+    "quote": "You know who really makes history? The person who writes it down.",
+    "author": "Jorrn",
+    "shown": false
+  },
+  {
+    "id": 7,
+    "quote": "Face hardship without fear! Leave gossip and servility to gutter rats who can't stand up for themselves.",
+    "author": "Kodlak Whitemane",
+    "shown": false
+  },
+  {
+    "id": 8,
+    "quote": "Seek the truth. Uphold the law. When in doubt, seek the counsel of the wise.",
+    "author": "Julianos",
+    "shown": false
+  },
+  {
+    "id": 9,
+    "quote": "Let me guess... Someone stole your sweetroll?",
+    "author": "Guard",
+    "shown": false
+  },
+  {
+    "id": 10,
+    "quote": "The time and place of every great deed are determined by Fate. But without a Hero, there can be no great deed.",
+    "author": "Zurin Arctus",
+    "shown": false
+  },
+  {
+    "id": 11,
+    "quote": "There is both light and darkness within us. What matters is which side we choose.",
+    "author": "Sirius Black",
+    "shown": false
+  },
+  {
+    "id": 12,
+    "quote": "It takes courage to stand up to your enemies, but even greater courage to stand up to your friends.",
+    "author": "Albus Dumbledore",
+    "shown": false
+  },
+  {
+    "id": 13,
+    "quote": "Happiness can be found even in the darkest of times, if one only remembers to turn on the light.",
+    "author": "Albus Dumbledore",
+    "shown": false
+  },
+  {
+    "id": 14,
+    "quote": "You fail to understand that it matters not what someone is born, but what they grow to be!",
+    "author": "Albus Dumbledore",
+    "shown": false
+  },
+  {
+    "id": 15,
+    "quote": "Those who love us never really leave us.",
+    "author": "Sirius Black",
+    "shown": false
+  },
+  {
+    "id": 16,
+    "quote": "So, you fear fear itself most of all. That is admirable!",
+    "author": "Remus Lupin",
+    "shown": false
+  },
+  {
+    "id": 17,
+    "quote": "It is easier to forgive people for being wrong than for being right.",
+    "author": "Albus Dumbledore",
+    "shown": false
+  },
+  {
+    "id": 18,
+    "quote": "After all, to the well-organized mind, death is but the next great adventure.",
+    "author": "Albus Dumbledore",
+    "shown": false
+  },
+  {
+    "id": 19,
+    "quote": "Everything we lose eventually comes back to us, though not always in the way we expect.",
+    "author": "Luna Lovegood",
+    "shown": false
+  },
+  {
+    "id": 20,
+    "quote": "Fear of a name increases fear of the thing itself.",
+    "author": "Hermione Granger",
+    "shown": false
+  },
+  {
+    "id": 21,
+    "quote": "Even the smallest person can change the course of the future.",
+    "author": "Galadriel",
+    "shown": false
+  },
+  {
+    "id": 22,
+    "quote": "A wizard is never late, nor is he early. He arrives precisely when he means to.",
+    "author": "Gandalf",
+    "shown": false
+  },
+  {
+    "id": 23,
+    "quote": "For nothing is evil in the beginning.",
+    "author": "Elrond",
+    "shown": false
+  },
+  {
+    "id": 24,
+    "quote": "Any riddle, once solved, seems remarkably easy.",
+    "author": "Gandalf",
+    "shown": false
+  },
+  {
+    "id": 25,
+    "quote": "'If only I! If only you!' he said. 'Idle talk begins with “if.”'",
+    "author": "Denethor",
+    "shown": false
+  },
+  {
+    "id": 26,
+    "quote": "Many that live deserve death. And some that die deserve life.",
+    "author": "Gandalf",
+    "shown": false
+  },
+  {
+    "id": 27,
+    "quote": "You want a name? What good is a name? Tell me, who will you be if you are stripped of your names?",
+    "author": "Tom Bombadil",
+    "shown": false
+  },
+  {
+    "id": 28,
+    "quote": "Evil can be spoken of in many ways. Some sow evil themselves; others—true friends—wander in distant lands in times of peace and prosperity, only to appear on a dark day and lend a helping hand.",
+    "author": "Gandalf",
+    "shown": false
+  },
+  {
+    "id": 29,
+    "quote": "Of all the evils and hardships Fate has in store, none is so bitter and shameful for a man as to win the love of a fair and fearless maiden and be unable to return it.",
+    "author": "Aragorn",
+    "shown": false
+  },
+  {
+    "id": 30,
+    "quote": "It's not the stories that come to an end. The heroes simply come and go when their work is done.",
+    "author": "Frodo Baggins",
+    "shown": false
+  },
+  {
+    "id": 31,
+    "quote": "Do. Or do not. There is no try.",
+    "author": "Yoda",
+    "shown": false
+  },
+  {
+    "id": 32,
+    "quote": "May the Force be with you.",
+    "author": "Unknown",
+    "shown": false
+  },
+  {
+    "id": 33,
+    "quote": "I find your lack of faith disturbing.",
+    "author": "Darth Vader",
+    "shown": false
+  },
+  {
+    "id": 34,
+    "quote": "Many of the truths we cling to depend on our point of view.",
+    "author": "Obi-Wan Kenobi",
+    "shown": false
+  },
+  {
+    "id": 35,
+    "quote": "Who's more foolish: the fool, or the fool who follows him?",
+    "author": "Obi-Wan Kenobi",
+    "shown": false
+  },
+  {
+    "id": 36,
+    "quote": "Fear leads to the dark side.",
+    "author": "Yoda",
+    "shown": false
+  },
+  {
+    "id": 37,
+    "quote": "I'm just a person trying to find my way in the universe.",
+    "author": "Jango Fett",
+    "shown": false
+  },
+  {
+    "id": 38,
+    "quote": "So this is how liberty dies—with thunderous applause.",
+    "author": "Padmé Amidala",
+    "shown": false
+  },
+  {
+    "id": 39,
+    "quote": "The higher you raise your nose, the harder you'll fall.",
+    "author": "Count Dooku",
+    "shown": false
+  },
+  {
+    "id": 40,
+    "quote": "Death is a natural part of life. Rejoice for those around you who transform into the Force. Mourn them not; miss them not. Attachment leads to jealousy, and jealousy is the shadow of greed.",
+    "author": "Yoda",
+    "shown": false
+  },
+  {
+    "id": 41,
+    "quote": "Coincidence is just the universe's way of remaining anonymous.",
+    "author": "Master Oogway",
+    "shown": false
+  },
+  {
+    "id": 42,
+    "quote": "Don't take every little nut and bolt so much to heart... It might not take it. This is no joke; it's your health we're talking about.",
+    "author": "Sovunya",
+    "shown": false
+  },
+  {
+    "id": 43,
+    "quote": "Here's the paradox: we perform heroic deeds for those who no longer care about us, while those who love us need no heroics from us.",
+    "author": "Losyash",
+    "shown": false
+  },
+  {
+    "id": 44,
+    "quote": "You can't force someone to change, even if they ask you to. Once you're ready, you can change on your own, without anyone else's help.",
+    "author": "Krosh",
+    "shown": false
+  },
+  {
+    "id": 45,
+    "quote": "A true friend won't abandon you. And if they're not a true friend, there's nothing to worry about.",
+    "author": "Krosh",
+    "shown": false
+  },
+  {
+    "id": 46,
+    "quote": "Why should I pretend I'm happy when I'm actually feeling miserable?",
+    "author": "Barash",
+    "shown": false
+  },
+  {
+    "id": 47,
+    "quote": "What's the point of a universe without miracles?",
+    "author": "Barash",
+    "shown": false
+  },
+  {
+    "id": 48,
+    "quote": "No, seriously! There are problems whose scale no one but you seems to notice. No one! Everyone lives in their own little worlds, in shells built in their own image. But there are questions of planetary scale! Of universal scale! How can we get these questions through the walls of their shells?",
+    "author": "Kar-Karych",
+    "shown": false
+  },
+  {
+    "id": 49,
+    "quote": "No matter what anyone says, we're all special and unique. And it's wonderful that, despite our differences, we can understand one another. So why, when we suddenly understand this world much better than others do, does misunderstanding arise?",
+    "author": "Pin",
+    "shown": false
+  },
+  {
+    "id": 50,
+    "quote": "It's very hard to live while thinking about every mistake you've made, so you forget the bad and remember only the good. It's convenient, but you can't escape yourself.",
+    "author": "Kar-Karych",
+    "shown": false
+  },
+  {
+    "id": 51,
+    "quote": "Do you ever have thoughts in your head that are beautiful, striking, and perfectly aimed, but when you say them aloud, they come out as complete nonsense?",
+    "author": "Barash",
+    "shown": false
+  },
+  {
+    "id": 52,
+    "quote": "People board express trains, yet they don't understand what they're looking for. So they find no peace, rushing first one way, then another... all in vain. The eyes are blind. One must look with the heart.",
+    "author": "Antoine de Saint-Exupéry",
+    "shown": false
+  },
+  {
+    "id": 53,
+    "quote": "This is what my fox was like before. He was no different from a hundred thousand other foxes. But I made him my friend, and now he is unique in all the world.",
+    "author": "The Little Prince",
+    "shown": false
+  },
+  {
+    "id": 54,
+    "quote": "Your rose is special. It is your rose. The time you spent on her is what makes her so important.",
+    "author": "The Fox",
+    "shown": false
+  },
+  {
+    "id": 55,
+    "quote": "Worthless people live only to eat and drink. Worthy people eat and drink only to live.",
+    "author": "Socrates",
+    "shown": false
+  },
+  {
+    "id": 56,
+    "quote": "People seldom think of darkness in the light, of misfortune in happiness, or of suffering in comfort. Yet in darkness they think of light, in misfortune of happiness, and in poverty of prosperity.",
+    "author": "Immanuel Kant",
+    "shown": false
+  },
+  {
+    "id": 57,
+    "quote": "A journey of a thousand miles begins with a single step.",
+    "author": "Laozi",
+    "shown": false
+  },
+  {
+    "id": 58,
+    "quote": "From the past, we learn about the future; from what is clear, we understand what is hidden.",
+    "author": "Mozi",
+    "shown": false
+  },
+  {
+    "id": 59,
+    "quote": "Whatever we set out to do, the time always seems wrong, and circumstances are never perfectly favorable. Those who wait for the ideal moment may never begin—and if they do, they often meet with failure.",
+    "author": "Niccolò Machiavelli",
+    "shown": false
+  },
+  {
+    "id": 60,
+    "quote": "To live is not merely to breathe; it is to act. The person who has lived the most is not the one who has counted the most years, but the one who has felt life most deeply.",
+    "author": "Jean-Jacques Rousseau",
+    "shown": false
+  },
+  {
+    "id": 61,
+    "quote": "You cannot teach a person to be happy, but you can raise them in such a way that they will be happy.",
+    "author": "Alexander Pushkin",
+    "shown": false
+  },
+  {
+    "id": 62,
+    "quote": "I think only unsuccessful, unhappy people enjoy arguing. Happy people live quietly.",
+    "author": "Maxim Gorky",
+    "shown": false
+  },
+  {
+    "id": 63,
+    "quote": "An excessively comfortable life often spoils one's character, just as too much food upsets the stomach. In such cases, both body and soul may be cured by remedies that are unpleasant—even repulsive—to the taste.",
+    "author": "Charles Dickens",
+    "shown": false
+  },
+  {
+    "id": 64,
+    "quote": "Success is not final; failure is not fatal: what counts is the courage to continue.",
+    "author": "Winston Churchill",
+    "shown": false
+  }
+]
