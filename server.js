@@ -6,9 +6,13 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
-const QUOTES_FILE = path.join(__dirname, 'data', 'quotes.json'); // «база данных»
-const STATE_FILE = path.join(__dirname, 'data', 'state.json');   // текущая цитата и день
-const PUBLIC_DIR = path.join(__dirname, 'public');               // сюда положить файлы сайта
+const QUOTES_FILE = path.join(__dirname, 'data', 'quotes_ru.json'); 
+const QUOTES_DIR = path.join(__dirname, 'data');                    
+const LANGS = ['en', 'ru'];
+const DEFAULT_LANG = 'en';
+const MASTER_LANG = 'ru'; // язык главной базы (в ней хранится shown)
+const STATE_FILE = path.join(__dirname, 'data', 'state.json');   
+const PUBLIC_DIR = path.join(__dirname, 'public');               
 const DAY_MS = 24 * 60 * 60 * 1000;
 
 /* ---------- Время (UTC) со сверкой через интернет ---------- */
@@ -34,7 +38,7 @@ async function syncTime() {
         console.log(`[time] синхронизировано, поправка ${offset} мс`);
         return;
       }
-    } catch (e) { /* пробуем следующий источник */ }
+    } catch (e) {  }
   }
   console.warn('[time] интернет недоступен, используются системные часы');
 }
@@ -43,7 +47,7 @@ const now = () => Date.now() + offset;
 const todayStr = () => new Date(now()).toISOString().slice(0, 10); // YYYY-MM-DD в UTC
 const msUntilMidnight = () => DAY_MS - (now() % DAY_MS);
 
-/* ---------- Работа с файлами ---------- */
+/* ---------- Work with files - Работа с файлами ---------- */
 
 function readJson(file, fallback) {
   try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
@@ -56,19 +60,19 @@ function writeJson(file, data) {
   fs.renameSync(tmp, file); // атомарная запись, файл не повредится при сбое
 }
 
-/* ---------- Логика цитат ---------- */
+/* ---------- QUotes Logic Логика цитат ---------- */
 
 function pickNewQuote() {
   const quotes = readJson(QUOTES_FILE, []);
-  if (quotes.length === 0) throw new Error('quotes.json пуст');
+  if (quotes.length === 0) throw new Error('quotes_ru.json пуст');
   const state = readJson(STATE_FILE, {});
 
   let candidates = quotes.filter(q => !q.shown);
   if (candidates.length === 0) {
     // все показаны — сбрасываем статус
     quotes.forEach(q => { q.shown = false; });
-    candidates = quotes.filter(q => q.id !== state.currentId); // не повторяем вчерашнюю
-    if (candidates.length === 0) candidates = quotes;           // в списке всего одна цитата
+    candidates = quotes.filter(q => q.id !== state.currentId);
+    if (candidates.length === 0) candidates = quotes;          
   }
 
   const chosen = candidates[Math.floor(Math.random() * candidates.length)];
@@ -78,7 +82,7 @@ function pickNewQuote() {
   return chosen;
 }
 
-// Возвращает цитату на сегодня; если день сменился (или состояния нет) — выбирает новую
+
 function getTodayQuote() {
   const state = readJson(STATE_FILE, {});
   const quotes = readJson(QUOTES_FILE, []);
@@ -87,11 +91,23 @@ function getTodayQuote() {
   return pickNewQuote();
 }
 
-function payload(q) {
-  return { id: q.id, quote: q.quote, author: q.author, msUntilChange: msUntilMidnight() };
+function localize(q, lang) {
+  if (lang === MASTER_LANG) return q;
+  const list = readJson(path.join(QUOTES_DIR, `quotes_${lang}.json`), []);
+  const tr = list.find(x => x.id === q.id);
+  return tr ? { ...q, quote: tr.quote, author: tr.author } : q;
 }
 
-/* ---------- Планировщик: смена ровно в 00:00 UTC ---------- */
+function getLang(url) {
+  const lang = url.searchParams.get('lang');
+  return LANGS.includes(lang) ? lang : DEFAULT_LANG;
+}
+
+function payload(q, lang) {
+  const t = localize(q, lang);
+  return { id: t.id, quote: t.quote, author: t.author, lang, msUntilChange: msUntilMidnight() };
+}
+
 
 function scheduleMidnight() {
   setTimeout(async () => {
@@ -100,8 +116,6 @@ function scheduleMidnight() {
     scheduleMidnight();
   }, msUntilMidnight() + 500);
 }
-
-/* ---------- HTTP ---------- */
 
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
@@ -112,7 +126,7 @@ const MIME = {
 function sendJson(res, code, data) {
   res.writeHead(code, {
     'Content-Type': 'application/json; charset=utf-8',
-    'Access-Control-Allow-Origin': '*', // чтобы работало и при открытии html как файла
+    'Access-Control-Allow-Origin': '*',
     'Cache-Control': 'no-store',
   });
   res.end(JSON.stringify(data));
@@ -123,11 +137,11 @@ const server = http.createServer((req, res) => {
 
   try {
     if (url.pathname === '/api/quote' && req.method === 'GET') {
-      return sendJson(res, 200, payload(getTodayQuote()));
+      return sendJson(res, 200, payload(getTodayQuote(), getLang(url)));
     }
     // ТЕСТ: принудительная смена цитаты (удалить перед публикацией сайта)
     if (url.pathname === '/api/quote/next' && req.method === 'POST') {
-      return sendJson(res, 200, payload(pickNewQuote()));
+      return sendJson(res, 200, payload(pickNewQuote(), getLang(url)));
     }
     if (url.pathname.startsWith('/api/')) {
       res.writeHead(204, { 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST' });
@@ -150,7 +164,7 @@ const server = http.createServer((req, res) => {
 
 (async () => {
   await syncTime();
-  setInterval(syncTime, 60 * 60 * 1000); // повторная сверка раз в час
+  setInterval(syncTime, 60 * 60 * 1000);
   getTodayQuote();
   scheduleMidnight();
   server.listen(PORT, () => console.log(`http://localhost:${PORT}`));

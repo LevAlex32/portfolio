@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Портфолио</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/proj.css">
+    <link rel="stylesheet" href="styles/lang.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +16,26 @@
     <link rel="stylesheet" href="styles/theme.css">
 </head>
 <body>
-    
+
 <aside class="sidebar">
-    <div class="sidebar_name">Левин Александр Васильевич</div>
+    <div class="sidebar_name" data-i18n="name.full">Alexander Levin</div>
+
+    <div class="lang-switch">
+        <label for="lang-select" class="sr-only" data-i18n="lang.label">Language</label>
+        <select id="lang-select">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+        </select>
+    </div>
 
     <nav class="sidebar_nav">
-      <a href="#main">Главная</a>
-      <a href="#about-quotes">Обо мне</a>
-      <a href="#skills">Навыки</a>
-      <a href="#experience">Рабочий опыт</a>
-      <a href="#education">Образование</a>
-      <a href="#projects">Проекты</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#main" data-i18n="menu.main">Home</a>
+      <a href="#about-quotes" data-i18n="menu.about">About me</a>
+      <a href="#skills" data-i18n="menu.skills">Skills</a>
+      <a href="#experience" data-i18n="menu.experience">Work experience</a>
+      <a href="#education" data-i18n="menu.education">Education</a>
+      <a href="#projects" data-i18n="menu.projects">Projects</a>
+      <a href="#contacts" data-i18n="menu.contacts">Contacts</a>
     </nav>
 </aside>
 
@@ -34,155 +43,153 @@
 <main class="content">
     <section id="main" class="hero">
         <figure class="hero_photo">
-            <img src="images/hero.png" alt="Photo">
+            <img src="images/hero.jpeg" alt="Photo">
         </figure>
-        <div class="hero_text"> 
-            <p class="hero_kicker">Начинающий разработчик</p>
-            <h1 class="hero_title">Левин Александр</h1>
-            <p class="hero_subtitle">Создаю проекты, изучаю новые технологии и стремлюсь к постоянному развитию в сфере программирования.</p>
+        <div class="hero_text">
+            <p class="hero_kicker" data-i18n="hero.kicker">Aspiring developer</p>
+            <h1 class="hero_title" data-i18n="hero.title">Alexander Levin</h1>
+            <p class="hero_subtitle" data-i18n="hero.subtitle">I build projects, learn new technologies, and keep growing in programming.</p>
         </div>
     </section>
-    <section id="about-quotes" class="about-quotes"> 
+    <section id="about-quotes" class="about-quotes">
         <div class="about">
-        <h4>Обо мне</h4>
-        <p>Я начинающий разработчик, увлечённый программированием и созданием собственных проектов. Быстро обучаюсь, с интересом осваиваю новые технологии и стараюсь применять полученные знания на практике. <br>
-            Мне нравится решать технические задачи, экспериментировать с идеями и находить способы сделать свои проекты лучше. В свободное время я увлекаюсь видеоиграми, чтением, комиксами и настольными ролевыми играми. Также мне интересно разрабатывать собственные игровые концепции и исследовать, как устроены виртуальные миры и их механики. <br> 
-            Я стремлюсь постоянно развиваться, совершенствовать свои навыки и создавать полезные, интересные и качественные проекты.</p>
-            </div>
+            <h4 data-i18n="about.title">About me</h4>
+            <p data-i18n-html="about.text"></p>
+        </div>
 
-            <div class="quotes">
-                <h2>Цитаты</h2>
-                <blockquote class="quote-text" id="quote-text"></blockquote>
-                <p class="quote-author" id="quote-author"></p>
-            </div>
+        <div class="quotes">
+            <h2 data-i18n="quotes.title">Quotes</h2>
+            <blockquote class="quote-text" id="quote-text"></blockquote>
+            <p class="quote-author" id="quote-author"></p>
+        </div>
     </section>
     <section class="skills" id="skills">
-        <h2>Навыки</h2>
-            <div class="skills_grid">
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+        <h2 data-i18n="skills.title">Skills</h2>
+        <div class="skills_grid">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-1.png" alt="English" class="skill-card_img">
-                    <h3 class="skill-card_name">Английский</h3>
+                        <img src="images/skill-1.png" alt="English" class="skill-card_img">
+                        <h3 class="skill-card_name" data-i18n="skill.1.name">English</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc">Уровень B2–C1: уверенно читаю техническую документацию, понимаю сложные тексты и могу общаться на профессиональные темы. Продолжаю совершенствовать навыки для достижения уровня C1.</p>
+                        <p class="skill-card_desc" data-i18n="skill.1.desc"></p>
                     </div>
-                    </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-2.png" alt="Unity" class="skill-card_img">
-                    <h3 class="skill-card_name">Unity</h3>
+                        <img src="images/skill-2.png" alt="Unity" class="skill-card_img">
+                        <h3 class="skill-card_name">Unity</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc"> Уверенно работаю с Unity, разрабатываю игровые механики и использую основные инструменты движка для создания игровых проектов.</p>
+                        <p class="skill-card_desc" data-i18n="skill.2.desc"></p>
                     </div>
-                    </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-3.png" alt="Godot" class="skill-card_img">
-                    <h3 class="skill-card_name">Godot</h3>
+                        <img src="images/skill-3.png" alt="Godot" class="skill-card_img">
+                        <h3 class="skill-card_name">Godot</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc"> Изучаю движок Godot, осваиваю его инструменты, систему сцен и скриптовый язык GDScript для разработки игр.</p>
+                        <p class="skill-card_desc" data-i18n="skill.3.desc"></p>
                     </div>
-                    </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-4.png" alt="Python" class="skill-card_img">
-                    <h3 class="skill-card_name">Python</h3>
+                        <img src="images/skill-4.png" alt="Python" class="skill-card_img">
+                        <h3 class="skill-card_name">Python</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc">Обладаю средним уровнем владения Python, умею писать скрипты, работать с базовыми структурами данных и автоматизировать задачи.</p>
+                        <p class="skill-card_desc" data-i18n="skill.4.desc"></p>
                     </div>
-                    </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-5.png" alt="HTML5" class="skill-card_img">
-                    <h3 class="skill-card_name">HTML5</h3>
+                        <img src="images/skill-5.png" alt="HTML5" class="skill-card_img">
+                        <h3 class="skill-card_name">HTML5</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc">Обладаю средним уровнем владения HTML5, умею создавать структуру веб-страниц, использовать семантическую разметку и основные HTML-элементы.</p>
+                        <p class="skill-card_desc" data-i18n="skill.5.desc"></p>
                     </div>
-                    </div>
-                </article>
+                </div>
+            </article>
 
-                <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
-                    <div class="skill-card_inner">
+            <article class="skill-card" tabindex="0" role="button" aria-pressed="false">
+                <div class="skill-card_inner">
                     <div class="skill-card_face skill-card_front">
-                    <img src="images/skill-6.png" alt="Prompt Engineering" class="skill-card_img">
-                    <h3 class="skill-card_name">Prompt Engineering</h3>
+                        <img src="images/skill-6.png" alt="Prompt Engineering" class="skill-card_img">
+                        <h3 class="skill-card_name">Prompt Engineering</h3>
                     </div>
                     <div class="skill-card_face skill-card_back">
-                    <p class="skill-card_desc">Умею эффективно использовать ИИ для решения рабочих задач: составления запросов, генерации и анализа кода, поиска решений, автоматизации процессов и ускорения разработки.</p>
+                        <p class="skill-card_desc" data-i18n="skill.6.desc"></p>
                     </div>
-                    </div>
-                </article>
-            </div>
+                </div>
+            </article>
+        </div>
     </section>
     <section id="experience">
-        <h4>Рабочий опыт</h4>
+        <h4 data-i18n="exp.title">Work experience</h4>
         <ul class="timeline">
            <li class="timeline_item">
-            <div class="timeline_date">Май 2026-Сентябрь 2026
-                <h3 class="timeline_title">Оператор поддержки
-                    <p class="timeline_text">Работал оператором поддержки в CDEK. Работал с людьми в чатах и звонках. Работал с претензиями, негативно настроенными клиентами.</p>
+            <div class="timeline_date"><span data-i18n="exp.1.date">May 2026 – September 2026</span>
+                <h3 class="timeline_title"><span data-i18n="exp.1.title">Support operator</span>
+                    <p class="timeline_text" data-i18n="exp.1.text"></p>
                 </h3>
             </div>
            </li>
            <li class="timeline_item">
-            <div class="timeline_date">Сентябрь 2025-Март 2026
-                <h3 class="timeline_title">Оператор чатов поддержки
-                    <p class="timeline_text">Работал оператором поддержки в маркетплейсе Ozon. Работал в чатах. Помогал людям с заказами, претензиями, ошибками в работе приложения и сайта.</p>
+            <div class="timeline_date"><span data-i18n="exp.2.date">September 2025 – March 2026</span>
+                <h3 class="timeline_title"><span data-i18n="exp.2.title">Chat support operator</span>
+                    <p class="timeline_text" data-i18n="exp.2.text"></p>
                 </h3>
             </div>
            </li>
            <li class="timeline_item">
-            <div class="timeline_date">Июнь 2025
-                <h3 class="timeline_title">Пеший курьер
-                    <p class="timeline_text">Доставлял заказы из кафе и ресторанов на ногах.</p>
+            <div class="timeline_date"><span data-i18n="exp.3.date">June 2025</span>
+                <h3 class="timeline_title"><span data-i18n="exp.3.title">On-foot courier</span>
+                    <p class="timeline_text" data-i18n="exp.3.text"></p>
                 </h3>
             </div>
            </li>
            <li class="timeline_item">
-            <div class="timeline_date">Июль-Август 2024
-                <h3 class="timeline_title">Администратор PS клуба
-                    <p class="timeline_text">Следил за порядком в клубе. Принимал оплату, следил за игровым временем. Помогал с настройкой приставок.</p>
+            <div class="timeline_date"><span data-i18n="exp.4.date">July – August 2024</span>
+                <h3 class="timeline_title"><span data-i18n="exp.4.title">PlayStation club administrator</span>
+                    <p class="timeline_text" data-i18n="exp.4.text"></p>
                 </h3>
             </div>
            </li>
         </ul>
     </section>
     <section id="education">
-        <h4>Центральноазиатский Технико-Экономический колледж</h4>
-        <p>2022-2025</p>
-        <p>Специальность: разработчик программного обеспечения</p>
-        <p>Технический специалист</p>
-        <p>Дополнительная информация: во время учёбы изучал следующие технологии: Python, C#, Unity, Web, Arduino</p>
+        <h4 data-i18n="edu.college">Central Asian Technical and Economic College</h4>
+        <p data-i18n="edu.years">2022–2025</p>
+        <p data-i18n="edu.specialty">Specialty: Software developer</p>
+        <p data-i18n="edu.qualification">Technical specialist</p>
+        <p data-i18n="edu.extra"></p>
     </section>
     <section id="projects">
-        <h2 class="projects_title">Проекты</h2>
+        <h2 class="projects_title" data-i18n="proj.title">Projects</h2>
         <div class="proj_grid">
             <div class="proj-card">
                 <div class="proj-card_inner">
                     <div class="proj-card_front">
                         <img class="proj-card-img" src="images/proj_game.png" alt="Platformer">
-                        <h3 class="proj-card_name"> 2д платформер с тематикой путешествия во времени</h3>
+                        <h3 class="proj-card_name" data-i18n="proj.1.name"></h3>
                     </div>
                     <div class="proj-card_back">
-                        <p class="proj-card_desc">2D-платформер, в котором тема путешествий во времени становится основой игрового процесса. Игрок исследует уровни, преодолевает препятствия и взаимодействует с окружением, используя особенности разных временных периодов. Проект предполагает сочетание классических механик платформера с головоломками и изменением игрового мира. Основная задача разработки — создать интересные игровые ситуации и связать механику перемещения с временной тематикой. Это pet-проект, в рамках которого я изучаю разработку игр и проектирование игровых механик.</p>
+                        <p class="proj-card_desc" data-i18n="proj.1.desc"></p>
                     </div>
                 </div>
             </div>
@@ -191,10 +198,10 @@
                 <div class="proj-card_inner">
                     <div class="proj-card_front">
                         <img class="proj-card-img" src="images/proj_site.png" alt="Resume">
-                        <h3 class="proj-card_name">Сайт-резюме</h3>
+                        <h3 class="proj-card_name" data-i18n="proj.2.name"></h3>
                     </div>
                     <div class="proj-card_back">
-                        <p class="proj-card_desc">Персональный сайт-портфолио, созданный для презентации моих навыков, интересов и собственных проектов. Сайт объединяет информацию обо мне, технические компетенции, опыт и примеры выполненных работ в едином интерфейсе. Визуальный стиль вдохновлён тёмным фэнтези и сочетает атмосферное оформление с удобной навигацией. При разработке я уделяю внимание адаптивной вёрстке, структурированию кода и доступности контента на разных устройствах. Проект также служит практикой в HTML, CSS и JavaScript.</p>
+                        <p class="proj-card_desc" data-i18n="proj.2.desc"></p>
                     </div>
                 </div>
             </div>
@@ -203,10 +210,10 @@
                 <div class="proj-card_inner">
                     <div class="proj-card_front">
                         <img class="proj-card-img" src="images/proj_site.png" alt="Calculator">
-                        <h3 class="proj-card_name">Калькулятор всё в одном (в прогрессе)</h3>
+                        <h3 class="proj-card_name" data-i18n="proj.3.name"></h3>
                     </div>
                     <div class="proj-card_back">
-                        <p class="proj-card_desc">Небольшое приложение-калькулятор, предназначенное для выполнения повседневных арифметических вычислений. Проект позволяет отработать обработку пользовательского ввода, работу с числами и реализацию математических операций. Особое внимание уделяется корректной обработке выражений, отображению результата и предотвращению ошибок при вычислениях. Интерфейс разрабатывается с учётом удобства использования и понятной обратной связи для пользователя. Это практический проект для закрепления основ программирования и создания интерактивных интерфейсов.</p>
+                        <p class="proj-card_desc" data-i18n="proj.3.desc"></p>
                     </div>
                 </div>
             </div>
@@ -215,10 +222,10 @@
                 <div class="proj-card_inner">
                     <div class="proj-card_front">
                         <img class="proj-card-img" src="images/proj_game.png" alt="StarBattles">
-                        <h3 class="proj-card_name">Морской бой в космосе</h3>
+                        <h3 class="proj-card_name" data-i18n="proj.4.name"></h3>
                     </div>
                     <div class="proj-card_back">
-                        <p class="proj-card_desc">Игровой проект, переосмысляющий классический морской бой в научно-фантастическом сеттинге. Вместо неподвижного размещения кораблей предполагается возможность перемещать их по игровому полю и использовать специальные способности, расходуя ограниченный запас энергии. Повреждения кораблей влияют на их мобильность, а некоторые бонусы позволяют менять позицию или скрывать перемещения от противника. Проект предусматривает режим игры против бота и локальное сражение двух игроков на одном устройстве.</p>
+                        <p class="proj-card_desc" data-i18n="proj.4.desc"></p>
                     </div>
                 </div>
             </div>
@@ -227,17 +234,17 @@
                 <div class="proj-card_inner">
                     <div class="proj-card_front">
                         <img class="proj-card-img" src="images/proj_game.png" alt="WitchSim">
-                        <h3 class="proj-card_name">Симулятор ведьмы</h3>
+                        <h3 class="proj-card_name" data-i18n="proj.5.name"></h3>
                     </div>
                     <div class="proj-card_back">
-                        <p class="proj-card_desc">Игровой проект о жизни ведьмы в фэнтезийном мире, где магия и исследование окружающей среды составляют основу игрового опыта. Концепция предполагает возможность изучать магические способности, экспериментировать с заклинаниями и развивать собственные навыки. Важной частью проекта является взаимодействие игровых систем, от управления ресурсами до применения магии в различных ситуациях. Разработка такого симулятора предоставляет возможность экспериментировать с игровой логикой, прогрессией персонажа и созданием атмосферного мира.</p>
+                        <p class="proj-card_desc" data-i18n="proj.5.desc"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <section id="contacts">
-        <h2>Контакты</h2>
+        <h2 data-i18n="contacts.title">Contacts</h2>
         <div class="contacts">
             <div class="contact">
                 <span class="contact_icon">
@@ -255,7 +262,7 @@
                 <span class="contact_icon">
                      <svg viewBox="0 0 24 24" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
                 </span>
-                <a href="https://t.me/alexlev541">Левин Александр</a>
+                <a href="https://t.me/alexlev541" data-i18n="contacts.telegram">Alexander Levin</a>
             </div>
             <div class="contact">
                 <span class="contact_icon">
@@ -267,6 +274,8 @@
     </section>
 </main>
 
+<!-- i18n.js должен идти первым: quote.js берёт из него текущий язык -->
+<script src="js/i18n.js"></script>
 <script src="js/skills.js"></script>
 <script src="js/proj.js"></script>
 <script src="js/quote.js"></script>
