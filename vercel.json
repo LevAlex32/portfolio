@@ -1,4 +1,5 @@
 {
+  "framework": null,
   "outputDirectory": "public",
   "functions": {
     "api/quote.js": { "includeFiles": "data/**" }
